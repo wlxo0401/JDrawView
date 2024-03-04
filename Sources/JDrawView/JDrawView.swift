@@ -11,7 +11,7 @@ public class JDrawView {
     }
     
     
-    func heee() {
+    public func heee() {
         print("이름: \(name)")
     }
     
