@@ -18,18 +18,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSw-EG-N5J" customClass="JDrawView" customModule="JDrawView">
-                                <rect key="frame" x="0.0" y="200" width="393" height="300"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="500"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="AWW-5C-pxd"/>
+                                    <constraint firstAttribute="height" constant="500" id="AWW-5C-pxd"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npc-fT-ijM">
+                                <rect key="frame" x="10" y="569" width="109" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="as UIImage"/>
+                                <connections>
+                                    <action selector="asUIImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lR5-72-rEc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GSw-EG-N5J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="Ktn-jJ-X69"/>
                             <constraint firstItem="GSw-EG-N5J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MEE-uP-Ogy"/>
+                            <constraint firstItem="Npc-fT-ijM" firstAttribute="top" secondItem="GSw-EG-N5J" secondAttribute="bottom" constant="10" id="URa-Ll-o1U"/>
+                            <constraint firstItem="Npc-fT-ijM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ZJ3-3d-3VX"/>
+                            <constraint firstItem="GSw-EG-N5J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hgi-ng-DiM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GSw-EG-N5J" secondAttribute="trailing" id="i55-rK-uLO"/>
                         </constraints>
                     </view>

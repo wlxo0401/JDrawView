@@ -8,7 +8,7 @@
 import UIKit
 import JDrawView
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, JDrawViewDelegate {
 
     let jdraw: JDrawView = JDrawView()
     
@@ -19,18 +19,23 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         storyboardJDrawView.backgroundColor = .red
-        
+        storyboardJDrawView.delegate = self
     }
     
-    // 움직임
-    public override func touchesMoved(_ touches: Set<UITouch>,
-                                      with event: UIEvent?) {
-        guard let point = touches.first?.location(in: nil) else {
-            return
-        }
-                
-        print("sdfdfpoint \(point)")
-        return
+    func touchesBeganJD() {
+        print("touchesBeganJD")
+    }
+    
+    func touchesMovedJD() {
+        print("touchesMovedJD")
+    }
+    
+    func getDrawPosition(position: CGPoint) {
+        print("position: \(position)")
+    }
+    @IBAction func asUIImageButton(_ sender: Any) {
+        let image = storyboardJDrawView.asImage()
+        UIPasteboard.general.image = image
     }
 }
 
