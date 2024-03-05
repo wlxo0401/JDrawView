@@ -24,7 +24,7 @@ public class JDrawView: UIView {
     private var strokeColor = UIColor.black
     private var strokeWidth: Float = 1
     
-    var delegate: JDrawViewDelegate?
+    public var delegate: JDrawViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,12 +37,12 @@ public class JDrawView: UIView {
     }
     
     // Line Width
-    func setLineWidth(width: Float){
+    public func setLineWidth(width: Float){
         self.strokeWidth = width
     }
     
     // Line Color
-    func setLineColor(color: UIColor) {
+    public func setLineColor(color: UIColor) {
         self.strokeColor = color
     }
 }
@@ -105,7 +105,7 @@ extension JDrawView {
 
 // MARK: - Util
 extension JDrawView {
-    func asImage() -> UIImage {
+    public func asImage() -> UIImage {
         let renderer = UIGraphicsImageRenderer(bounds: bounds)
         return renderer.image { rendererContext in
             layer.render(in: rendererContext.cgContext)
