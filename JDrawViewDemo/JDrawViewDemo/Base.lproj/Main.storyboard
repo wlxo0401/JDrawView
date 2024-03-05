@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSw-EG-N5J" customClass="JDrawView" customModule="JDrawView">
-                                <rect key="frame" x="10" y="69" width="373" height="300"/>
+                                <rect key="frame" x="0.0" y="200" width="393" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="AWW-5C-pxd"/>
@@ -28,9 +28,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GSw-EG-N5J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ktn-jJ-X69"/>
-                            <constraint firstItem="GSw-EG-N5J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MEE-uP-Ogy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GSw-EG-N5J" secondAttribute="trailing" constant="10" id="i55-rK-uLO"/>
+                            <constraint firstItem="GSw-EG-N5J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="Ktn-jJ-X69"/>
+                            <constraint firstItem="GSw-EG-N5J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MEE-uP-Ogy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GSw-EG-N5J" secondAttribute="trailing" id="i55-rK-uLO"/>
                         </constraints>
                     </view>
                     <connections>
