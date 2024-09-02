@@ -103,6 +103,23 @@ extension JDrawView {
     }
 }
 
+extension JDrawView {
+    private func addDashedLine(from start: CGPoint, to end: CGPoint) {
+        let lineLayer = CAShapeLayer()
+        let linePath = UIBezierPath()
+
+        linePath.move(to: start)
+        linePath.addLine(to: end)
+
+        lineLayer.path = linePath.cgPath
+        lineLayer.strokeColor = UIColor.black.cgColor
+        lineLayer.lineWidth = 2
+        lineLayer.lineDashPattern = [6, 3] // 대시 패턴: 6pt 선, 3pt 공백
+
+        self.layer.addSublayer(lineLayer)
+    }
+}
+
 // MARK: - Util
 extension JDrawView {
     public func asImage() -> UIImage {
@@ -111,4 +128,17 @@ extension JDrawView {
             layer.render(in: rendererContext.cgContext)
         }
     }
+    
+    public func setXAxisDashLine() {
+         // X축 대시 라인 추가
+        self.addDashedLine(from: CGPoint(x: 0, y: self.frame.size.height / 2),
+                       to: CGPoint(x: self.frame.size.width, y: self.frame.size.height / 2))
+     }
+
+    public func setYAxisDashLine() {
+         // Y축 대시 라인 추가
+        self.addDashedLine(from: CGPoint(x: self.frame.size.width / 2, y: 0),
+                       to: CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height))
+     }
 }
+
