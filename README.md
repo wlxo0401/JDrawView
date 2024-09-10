@@ -1,5 +1,33 @@
-# Install
-## Swift Package Manager Install
+# JDrawView
+
+JDrawView is a lightweight and flexible drawing view for iOS applications. It provides an easy-to-use interface for implementing drawing functionality in your iOS apps.
+
+## Features
+
+- Simple and intuitive drawing interface
+- Customizable line color and width
+- Support for adding horizontal and vertical dash lines
+- Ability to clear the drawing
+- Convert drawing to UIImage
+- Copy drawing to clipboard
+
+## Example
+### Function
+<img src="https://github.com/user-attachments/assets/1c261e9f-6930-4e4a-94c4-6cf6ff97ab21" width="300" alt="ItemScrollView 데모">
+
+### Copy
+<img src="https://github.com/user-attachments/assets/61543340-5f31-40c1-adc7-f79fc0e09a86" width="500" alt="ItemScrollView 데모">
+
+
+
+## Requirements
+
+- iOS 13.0+
+- Swift 5.0+
+
+## Installation
+
+JDrawView is available through [Swift Package Manager](https://swift.org/package-manager/).
 
 Swift Package Manager
 
@@ -9,10 +37,71 @@ dependencies: [
 ]
 ```
 
-# ScreenShot
+## Usage
 
-# Setup
+1. Import the module in your Swift file:
 
-## Use Interface Builder
+```swift
+import JDrawView
+```
 
-## Or use code
+2. Create and add a JDrawView to your view hierarchy:
+
+```swift
+let drawView = JDrawView(frame: view.bounds)
+view.addSubview(drawView)
+```
+
+3. Customize the drawing:
+
+```swift
+// Set line color
+drawView.setDrawColor(color: .red)
+
+// Set line width
+drawView.setDrawWidth(width: 5.0)
+
+// Add dash lines
+drawView.setHorizonDashLine(set: true)
+drawView.setVerticalDashLine(set: true)
+```
+
+4. Get the drawing as an image:
+
+```swift
+let image = drawView.asImage()
+```
+
+5. Clear the drawing:
+
+```swift
+drawView.clearDrawing()
+```
+
+## Example
+
+```swift
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let drawView = JDrawView(frame: view.bounds)
+        view.addSubview(drawView)
+        
+        drawView.setDrawColor(color: .blue)
+        drawView.setDrawWidth(width: 3.0)
+    }
+}
+```
+
+## License
+
+JDrawView is available under the MIT license. See the LICENSE file for more info.
+
+## Author
+
+Your Name
+
+## Contribution
+
+Contributions are welcome! Please feel free to submit a Pull Request.
