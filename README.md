@@ -81,6 +81,9 @@ drawView.clearDrawing()
 ## Example
 
 ```swift
+import UIKit
+import JDrawView
+
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
