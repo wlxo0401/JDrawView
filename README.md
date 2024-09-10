@@ -103,14 +103,6 @@ class ViewController: UIViewController {
 }
 ```
 
-## License
-
-JDrawView is available under the MIT license. See the LICENSE file for more info.
-
-## Author
-
-Your Name
-
 ## Contribution
 
 Contributions are welcome! Please feel free to submit a Pull Request.
