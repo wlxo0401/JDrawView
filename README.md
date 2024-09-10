@@ -11,7 +11,7 @@ JDrawView is a lightweight and flexible drawing view for iOS applications. It pr
 - Convert drawing to UIImage
 - Copy drawing to clipboard
 
-## Example
+## Example(It may take a long time to load because it's a GIF)
 ### Function
 <img src="https://github.com/user-attachments/assets/1c261e9f-6930-4e4a-94c4-6cf6ff97ab21" width="300" alt="ItemScrollView 데모">
 
