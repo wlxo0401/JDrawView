@@ -33,7 +33,7 @@ Swift Package Manager
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/wlxo0401/JDrawView.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/wlxo0401/JDrawView.git", .upToNextMajor(from: "1.0.4"))
 ]
 ```
 
@@ -85,9 +85,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let drawView = JDrawView(frame: view.bounds)
+        let drawView = JDrawView()
         view.addSubview(drawView)
+
+        drawView.translatesAutoresizingMaskIntoConstraints = false
         
+        NSLayoutConstraint.activate([
+            drawView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            drawView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            drawView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            drawView.heightAnchor.constraint(equalTo: drawView.widthAnchor),
+        ])
+
         drawView.setDrawColor(color: .blue)
         drawView.setDrawWidth(width: 3.0)
     }
